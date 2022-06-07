@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.2.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.2.1'
+    implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+    implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: '2.13.2'
+    testImplementation group: 'org.testng', name: 'testng', version: '7.4.0'
+}
+
+test {
+    useTestNG()
+}
