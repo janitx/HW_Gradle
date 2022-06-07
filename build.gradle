@@ -19,6 +19,7 @@ dependencies {
 
 test {
     useTestNG()
+    suites 'testng.xml'
 }
 task copyFiles(type: Copy) {
     from 'src/main/resources'
