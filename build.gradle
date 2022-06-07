@@ -20,3 +20,17 @@ dependencies {
 test {
     useTestNG()
 }
+task copyFiles(type: Copy) {
+    from 'src/main/resources'
+    into 'archive'
+    include '**/*.xml', '**/*.txt', '**/*.properties'
+}
+
+task customJar(type: Jar) {
+    manifest {
+        attributes firstKey: 'firstValue', secondKey: 'secondValue'
+    }
+    archiveName = 'test1.jar'
+    destinationDir = file("${buildDir}/jars")
+    from sourceSets.main.output
+}
