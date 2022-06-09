@@ -5,6 +5,8 @@ import org.testng.annotations.Test;
 import utils.PropertiesReader;
 import utils.XmlToModelReader;
 
+import java.util.Locale;
+
 import static pages.HomePage.getHomePage;
 import static pages.SignInPage.getSignInPage;
 

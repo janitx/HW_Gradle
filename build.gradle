@@ -14,12 +14,12 @@ dependencies {
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.2.1'
     implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
     implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: '2.13.2'
-    testImplementation group: 'org.testng', name: 'testng', version: '7.4.0'
+    testImplementation group: 'org.testng', name: 'testng', version: '7.1.0'
 }
 
 test {
     useTestNG()
-    suites 'testng.xml'
+
 }
 task copyFiles(type: Copy) {
     from 'src/main/resources'
@@ -31,7 +31,7 @@ task customJar(type: Jar) {
     manifest {
         attributes firstKey: 'firstValue', secondKey: 'secondValue'
     }
-    archiveName = 'test1.jar'
-    destinationDir = file("${buildDir}/jars")
+    archiveFileName = 'test2.jar'
+    destinationDirectory = file("${buildDir}/jars")
     from sourceSets.main.output
 }
